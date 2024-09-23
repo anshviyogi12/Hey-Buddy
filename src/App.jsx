@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
+import Victory from "../assets/victory.svg";
+import Auth from "./components/Auth/Auth";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
-    <div>
-      <h1>Hey Buddy !!</h1>
-      <h3>By Stephan Rodrigues</h3>
-      <h3>Coming Soon</h3>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Auth />} />
+        <Route path="/auth" element={<Auth />}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
