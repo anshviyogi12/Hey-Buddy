@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import Navbar from "../Navbar";
 import createAxiosInstance from "../../helper/axiosInstance";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
   /*
@@ -12,6 +13,8 @@ function Register() {
     */
   const [userState, setUserState] = useState(0);
   const axiosInstance = createAxiosInstance();
+
+  const router = useNavigate()
 
   // Yup validation schema for Register form
   const registerValidationSchema = Yup.object({
@@ -68,6 +71,7 @@ function Register() {
       .then(response => {
         if (response.data.success) {
           toast.success(response.data.message)
+          router("/dashboard")
         } else {
           toast.warn(response.data.message)
         }

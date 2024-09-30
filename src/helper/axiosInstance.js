@@ -2,7 +2,7 @@ import axios from 'axios';
 
 function createAxiosInstance() {
     const axiosInstance = axios.create({
-        baseURL: 'http://localhost:8000/',  // Replace with your base URL
+        baseURL: 'https://hey-buddy-backend-sable.vercel.app/',  // Replace with your base URL
         timeout: 10000,                      // Set request timeout (in ms)
         headers: {
             'Content-Type': 'application/json',  // Default headers

@@ -33,11 +33,11 @@ const Home = () => (
     <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
       <div className={`${styles.boxWidth}`}>
         <Stats />
-        <Business />
+        {/* <Business />
         <Billing />
         <CardDeal />
         <Testimonals />
-        <Clients />
+        <Clients /> */}
         <CTA />
         <Footer />
       </div>
