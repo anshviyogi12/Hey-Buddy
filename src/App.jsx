@@ -1,19 +1,21 @@
-import React, { useState } from "react";
-import "./App.css";
-import Victory from "../assets/victory.svg";
-import Auth from "./components/Auth/Auth";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/Home/Home";
+import React from "react";
+import Home from "./components/Home";
+import { Router, Route, Routes, BrowserRouter } from "react-router-dom";
+import Register from "./components/Auth/Register";
+// import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
-function App() {
-  return (
+const App = () => (
+  <>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Auth />} />
-        <Route path="/auth" element={<Auth />}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
-  );
-}
+    <ToastContainer />
+  </>
+);
 
 export default App;
